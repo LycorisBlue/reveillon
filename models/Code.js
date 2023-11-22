@@ -8,7 +8,8 @@ const Code = sequelize.define('codes',{
     },
     user: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        defaultValue: ''
     },
     creator: {
         type: DataTypes.STRING,
@@ -16,10 +17,11 @@ const Code = sequelize.define('codes',{
     },
     // 0 pour unitisation et 1 pour utilisation
     status: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 1
     },
-    delete: {
+    disabled: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0

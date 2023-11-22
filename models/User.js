@@ -41,13 +41,14 @@ const User = sequelize.define('utilisateurs',{
     notgift: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: 'none'
     },
     fonction: {
         type: DataTypes.STRING,
         allowNull: false,
         defaultValue: "users"
     },
-    delete: {
+    disabled: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0

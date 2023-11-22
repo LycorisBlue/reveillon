@@ -15,7 +15,7 @@ const Admin = sequelize.define('admins',{
         allowNull: false,
         defaultValue: "admins"
     },
-    delete: {
+    disabled: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0
